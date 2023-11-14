@@ -27,9 +27,9 @@ class Solution {
         boolean rightResult = evaluateTree(root.right);
 
         if (root.val == 2) {
-            return leftResult || rightResult; // non-leaf or
+            return leftResult || rightResult; // non-leaf logical OR
         } else {
-            return leftResult && rightResult; // non-leaf and
+            return leftResult && rightResult; // non-leaf logical AND
         }
     }
 }
