@@ -1,0 +1,26 @@
+// NOT DONE YET FIX - https://leetcode.com/problems/move-pieces-to-obtain-a-string/description/
+class Solution {
+    public boolean canChange(String start, String target) {
+        StringBuilder s = new StringBuilder("");
+        StringBuilder t = new StringBuilder("");
+        if (start.equals(target)) {
+            return true;
+        } else if (start.length() < 3) {
+            return false;
+        } else {
+            for (int i = 0; i < start.length(); i++) {
+                if (start.charAt(i) != '_') {
+                    s.append(start.charAt(i));
+                }
+                if (target.charAt(i) != '_') {
+                    t.append(target.charAt(i));
+                }
+            }
+            if (s.toString().equals(t.toString())) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+}
